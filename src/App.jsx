@@ -2,19 +2,19 @@ import './App.css'
 import Sidebar from './components/Sidebar'
 import Main from './components/Main'
 import { useState } from 'react'
+import uuid from "react-uuid"
 
 function App() {
   const [notes, setNotes] = useState([]);
 
   const onAddNote = () => {
     const newNote = {
-      id: 1,
+      id: uuid(),
       title: "ノート",
       content: "内容",
       modDate: Date.now(),
     }
     setNotes([...notes, newNote]);
-    console.log(notes);
   }
   return (
     <div className='App'>

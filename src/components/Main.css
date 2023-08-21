@@ -43,3 +43,10 @@
   padding: 0px 25px 25px 25px;
   line-height: 2rem;
 }
+
+.no-active-note {
+  width: 70%;
+  text-align: center;
+  line-height: 100vh;
+  color: rgb(132, 132, 132);
+}

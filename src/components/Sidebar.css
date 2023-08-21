@@ -42,6 +42,10 @@ button {
 
 .app-sidebar-note p {
   margin: 10px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 3行まで表示 */
+  overflow: hidden;
 }
 
 .app-sidebar-note small {
@@ -54,4 +58,11 @@ button {
 
 .app-sidebar-note.active {
   background-color: #f1f0f0;
+}
+
+strong {
+  white-space: nowrap; /* テキストを改行せずに表示 */
+  overflow: hidden;    /* オーバーフローを隠す */
+  text-overflow: ellipsis; /* 30文字以上の部分を...と表示 */
+  width: 300px; /* 表示幅を指定（適宜調整） */
 }

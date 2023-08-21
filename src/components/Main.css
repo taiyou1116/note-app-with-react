@@ -50,3 +50,7 @@
   line-height: 100vh;
   color: rgb(132, 132, 132);
 }
+
+input::placeholder {
+  font-size: 25px;
+}

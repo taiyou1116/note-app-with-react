@@ -2,6 +2,8 @@ import React from 'react'
 import "./Sidebar.css"
 
 function Sidebar({ onAddNote, deleteNote, notes, activeNote, setActiveNote }) {
+  const sortedNote = notes.sort((a, b) => b.modDate - a.modDate);
+
   return (
     <div className='app-sidebar'>
       <div className='app-sidebar-header'>
@@ -9,7 +11,7 @@ function Sidebar({ onAddNote, deleteNote, notes, activeNote, setActiveNote }) {
         <button onClick={onAddNote}>追加</button>
       </div>
       <div className='app-sidebar-notes'>
-      {notes.map((note) => (
+      {sortedNote.map((note) => (
         <div className={`app-sidebar-note ${note.id === activeNote ? "active" : ""}`} key={note.id} onClick={() => setActiveNote(note.id)}>
           <div className='app-sidebar-title'>
             <strong>{note.title}</strong>
